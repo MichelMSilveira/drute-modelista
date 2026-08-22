@@ -1,4 +1,0 @@
-edicao funcionando
-
-// Exclua apenas este arquivo
-
