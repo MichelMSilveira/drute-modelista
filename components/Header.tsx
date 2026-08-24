@@ -1,101 +1,87 @@
-import Link from 'next/link'
-import { useState } from 'react'
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F7F4EF]/95 backdrop-blur-sm border-b border-black/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/20 bg-[#F7F4EF]/35 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="flex h-20 items-center justify-between">
+
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 flex items-center">
-            <span className="text-xl font-bold tracking-tight text-[#111111]">
-              RUTE
-            </span>
-            <span className="hidden sm:inline-block ml-2 text-sm text-[#3A3A3A]">
-              Modelista & Piloteira
-            </span>
+          <Link href="/" className="flex items-center">
+            <div>
+              <span className="block font-serif text-2xl tracking-wide text-[#111111]">
+                D&apos;Rute
+              </span>
+
+              <span className="block text-[10px] uppercase tracking-[0.35em] text-[#7A5D3A]">
+                Atelier
+              </span>
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
-            <Link href="#experiencia" className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] transition-colors">
-              Experiência
-            </Link>
-            <Link href="#servicos" className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] transition-colors">
-              Serviços
-            </Link>
-            <Link href="#processo" className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] transition-colors">
-              Processo
-            </Link>
-            <Link href="#portfolio" className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] transition-colors">
-              Portfólio
-            </Link>
-            <Link href="#contato" className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] transition-colors">
-              Contato
-            </Link>
+          {/* Menu Desktop */}
+          <nav className="hidden items-center gap-8 md:flex">
+            {[
+              ["Experiência", "#experiencia"],
+              ["Serviços", "#servicos"],
+              ["Processo", "#processo"],
+              ["Portfólio", "#portfolio"],
+              ["Contato", "#contato"],
+            ].map(([label, href]) => (
+              <Link
+                key={label}
+                href={href}
+                className="text-xs uppercase tracking-[0.25em] text-[#3A3A3A] transition hover:text-[#111111]"
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-md text-[#3A3A3A] hover:bg-[#C8A97E]/50 focus:outline-none focus:ring-2 focus:ring-[#C8A97E]/50"
+            className="rounded-full border border-[#B99A6A]/50 bg-[#F7F2EA]/40 p-3 md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-
-          {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-16 left-0 right-0 bg-[#F7F4EF] border-b border-black/10 shadow-lg">
-              <nav className="flex flex-col px-4 py-2 space-y-1">
-                <Link 
-                  href="#experiencia" 
-                  className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] py-2 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Experiência
-                </Link>
-                <Link 
-                  href="#servicos" 
-                  className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] py-2 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Serviços
-                </Link>
-                <Link 
-                  href="#processo" 
-                  className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] py-2 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Processo
-                </Link>
-                <Link 
-                  href="#portfolio" 
-                  className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] py-2 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Portfólio
-                </Link>
-                <Link 
-                  href="#contato" 
-                  className="text-sm font-medium text-[#3A3A3A] hover:text-[#111111] py-2 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Contato
-                </Link>
-              </nav>
+            <div className="space-y-1">
+              <span className="block h-px w-5 bg-[#111111]" />
+              <span className="block h-px w-5 bg-[#111111]" />
+              <span className="block h-px w-5 bg-[#111111]" />
             </div>
-          )}
+          </button>
         </div>
+
+        {/* Menu Mobile */}
+        {isMobileMenuOpen && (
+          <div className="absolute left-0 right-0 top-20 border-b border-black/10 bg-[#F7F4EF]/80 p-6 backdrop-blur-md md:hidden">
+            <nav className="flex flex-col gap-5">
+              {[
+                ["Experiência", "#experiencia"],
+                ["Serviços", "#servicos"],
+                ["Processo", "#processo"],
+                ["Portfólio", "#portfolio"],
+                ["Contato", "#contato"],
+              ].map(([label, href]) => (
+                <Link
+                  key={label}
+                  href={href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-sm uppercase tracking-[0.25em] text-[#3A3A3A]"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
+
       </div>
     </header>
-  )
+  );
 }

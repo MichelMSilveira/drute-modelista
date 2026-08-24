@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#FDFBF7] text-zinc-900 font-sans selection:bg-zinc-800 selection:text-white">
+    <div className="relative min-h-screen bg-transparent text-zinc-900 font-sans selection:bg-zinc-800 selection:text-white">
 
       {/* Header Minimalista */}
       <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-[#FDFBF7]/95 backdrop-blur-sm border-b border-zinc-200/50">

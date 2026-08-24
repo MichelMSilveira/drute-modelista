@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#F7F2EA] px-6 pb-24 pt-28 md:px-10 lg:px-16">
+    <section className="relative overflow-hidden bg-[#F7F2EA]/35 px-6 pb-24 pt-28 md:px-10 lg:px-16">
       {/* Fundo técnico sutil */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[7%] top-0 h-full w-px bg-black/5" />
@@ -32,7 +32,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <p className="mt-8 max-w-xl text-lg leading-8 text-[#4B5563]">
+          <p className="mt-8 max-w-xl text-lg leading-8 text-[#374151]">
             Um atelier contemporâneo que une mais de 30 anos de experiência,
             cuidado no caimento, capricho nos detalhes e ferramentas profissionais
             para desenvolvimento de peças, pilotagem e produção.
@@ -52,7 +52,7 @@ export default function Hero() {
 
             <a
               href="#contato"
-              className="border border-[#B99A6A] px-7 py-3 text-sm font-medium uppercase tracking-[0.18em] text-[#7A5D3A] transition hover:bg-[#EFE5D7]"
+              className="border border-[#B99A6A] bg-[#F7F2EA]/60 px-7 py-3 text-sm font-medium uppercase tracking-[0.18em] text-[#7A5D3A] transition hover:bg-[#EFE5D7]"
             >
               Entrar em contato
             </a>
@@ -61,60 +61,63 @@ export default function Hero() {
           <div className="mt-12 grid max-w-xl grid-cols-3 gap-4 border-t border-black/10 pt-6">
             <div>
               <p className="font-serif text-3xl text-[#111111]">30+</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#8B8B8B]">
+              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#6B7280]">
                 anos de experiência
               </p>
             </div>
 
             <div>
               <p className="font-serif text-3xl text-[#111111]">Caimento</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#8B8B8B]">
+              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#6B7280]">
                 atenção aos detalhes
               </p>
             </div>
 
             <div>
               <p className="font-serif text-3xl text-[#111111]">Produção</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#8B8B8B]">
+              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#6B7280]">
                 desenvolvimento profissional
               </p>
             </div>
           </div>
         </div>
 
-        {/* Composição visual */}
+        {/* Painel editorial translúcido */}
         <div className="relative">
           <div className="grid gap-5 md:grid-cols-[1.18fr_0.82fr]">
-            {/* Bloco visual principal com imagem real */}
-            <div className="relative min-h-[560px] overflow-hidden border border-[#D8C7AE] bg-[#E7DDCF] shadow-[0_34px_90px_rgba(0,0,0,0.08)]">
-              <img
-                src="/images/atelier-hero.png"
-                alt="Atelier de modelagem com manequim, moldes e tecidos"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+            <div className="relative min-h-[560px] overflow-hidden border border-[#D8C7AE]/70 bg-[#FBF8F3]/42 p-8 shadow-[0_34px_90px_rgba(0,0,0,0.08)] backdrop-blur-[2px]">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(185,154,106,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(185,154,106,0.12)_1px,transparent_1px)] bg-[size:34px_34px]" />
+              <div className="absolute inset-6 border border-[#B99A6A]/25" />
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#111111]/45 via-[#111111]/12 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/35 via-transparent to-[#F7F2EA]/10" />
-              <div className="absolute inset-6 border border-[#F7F2EA]/35" />
+              <div className="relative flex h-full min-h-[500px] flex-col justify-between">
+                <div>
+                  <p className="inline-flex rounded-full border border-[#D8C7AE] bg-[#F7F2EA]/80 px-4 py-2 text-[10px] uppercase tracking-[0.3em] text-[#7A5D3A]">
+                    Atelier técnico
+                  </p>
 
-              <div className="absolute left-6 top-6 rounded-full border border-[#F7F2EA]/50 bg-[#F7F2EA]/75 px-4 py-2 text-[10px] uppercase tracking-[0.3em] text-[#7A5D3A] backdrop-blur-sm">
-                Atelier real
-              </div>
+                  <p className="mt-10 max-w-md font-serif text-4xl leading-tight text-[#111111]">
+                    Técnica de modelagem, olhar de atelier e cuidado real no
+                    desenvolvimento da peça.
+                  </p>
+                </div>
 
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-[#EADFCC]">
-                  D&apos;Rute Atelier
-                </p>
+                <div className="border-t border-[#B99A6A]/30 pt-6">
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-[#8F785D]">
+                    D&apos;Rute Atelier
+                  </p>
 
-                <p className="mt-2 max-w-sm font-serif text-3xl leading-tight text-white">
-                  Experiência, técnica e cuidado em cada etapa da peça.
-                </p>
+                  <p className="mt-3 max-w-sm text-base leading-7 text-[#4B5563]">
+                    Experiência artesanal, processo técnico e ferramentas
+                    profissionais para transformar ideia, molde e peça piloto em
+                    desenvolvimento real.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Cards laterais */}
             <div className="grid gap-5">
-              <div className="relative min-h-[190px] overflow-hidden border border-[#D8C7AE] bg-[#F2EADF] p-6">
+              <div className="relative min-h-[190px] overflow-hidden border border-[#D8C7AE]/75 bg-[#F2EADF]/56 p-6 backdrop-blur-[2px]">
                 <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full border border-[#C7B59B]" />
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#8F785D]">
                   Modelagem &amp; caimento
@@ -124,7 +127,7 @@ export default function Hero() {
                 </p>
               </div>
 
-              <div className="relative min-h-[220px] overflow-hidden border border-[#D8C7AE] bg-[#FBF8F3] p-6 text-[#111111]">
+              <div className="relative min-h-[220px] overflow-hidden border border-[#D8C7AE]/75 bg-[#FBF8F3]/56 p-6 text-[#111111] backdrop-blur-[2px]">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(185,154,106,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(185,154,106,0.12)_1px,transparent_1px)] bg-[size:24px_24px]" />
 
                 <p className="relative text-[10px] uppercase tracking-[0.3em] text-[#8F785D]">
@@ -132,8 +135,8 @@ export default function Hero() {
                 </p>
 
                 <p className="relative mt-5 font-serif text-2xl leading-snug text-[#111111]">
-                  Modelagem, pilotagem, CAD e plotagem como apoio ao
-                  desenvolvimento e à produção.
+                  Modelagem, pilotagem, CAD e plotagem como apoio técnico ao
+                  desenvolvimento de peças.
                 </p>
               </div>
             </div>
