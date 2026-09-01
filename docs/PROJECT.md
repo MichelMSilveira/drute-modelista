@@ -1,14 +1,14 @@
-# Projeto Rute Modelista
+# Projeto D’Rute Modelista
 
 ## Status
 
-Protótipo V1.
+Proposta exploratória V1.
 
-O site está sendo desenvolvido antes do discovery completo com a cliente. Informações ainda não confirmadas devem ser tratadas como hipóteses.
+O conteúdo atual foi criado a partir de uma conversa inicial, antes do discovery completo com a cliente. Ele serve para contextualizá-la sobre possibilidades e testar se a direção conversa com seus gostos. Informações ainda não confirmadas devem ser tratadas como hipóteses.
 
 ## Cliente
 
-Rute.
+D’Rute.
 
 Modelista e piloteira com mais de 30 anos de experiência no setor de vestuário.
 
@@ -26,7 +26,7 @@ Criar uma presença digital profissional para apresentar:
 - trabalhos realizados;
 - formas de contato.
 
-Inicialmente, o produto será um site institucional/portfólio profissional.
+Inicialmente, o produto será um site institucional/portfólio profissional, precedido por uma etapa de acolhimento e assessoria para alinhar história, gosto, posicionamento, conteúdo e identidade visual.
 
 ## Posicionamento
 
