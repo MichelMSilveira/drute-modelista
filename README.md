@@ -54,7 +54,7 @@ O site deve apresentar D’Rute como profissional técnica de desenvolvimento de
 
 ## Segurança e publicação
 
-Não versionar credenciais, tokens, dados pessoais desnecessários ou configurações privadas. Antes de publicar, revisar as imagens, os contatos e as informações profissionais com a cliente.
+Não versionar credenciais, tokens, dados pessoais desnecessários ou configurações privadas. Antes de publicar, revisar as imagens, os contatos e as informações profissionais com a cliente. O workflow em `.github/workflows/deploy.yml` foi convertido em **validação sem publicação**; o antigo envio de `.next` para GitHub Pages falhava e não era um artefato de exportação estática. Publicação futura exige aceite da cliente, escolha de hospedagem compatível com os recursos usados e verificação da URL final. Configurações de GitHub Pages da conta devem ser revisadas separadamente, pois este arquivo não controla uma publicação nativa habilitada nas configurações do repositório.
 
 ## Status
 

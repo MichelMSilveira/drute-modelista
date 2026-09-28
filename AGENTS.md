@@ -7,3 +7,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Regras do projeto D’Rute
+
+- Leia `docs/PROJECT.md` e `docs/DISCOVERY.md` antes de alterar posicionamento, serviços, textos ou imagens. A proposta é exploratória e não constitui identidade final aprovada.
+- Não apresente informação provisória como fato confirmado pela cliente. Registre decisões e dúvidas no documento próprio.
+- Execute `npm run lint` e `npm run build` antes de solicitar revisão. Revise responsividade, acessibilidade e permissão de uso das imagens.
+- Um build ou PR aprovado não autoriza publicação. Obtenha o aceite da cliente e confirme a hospedagem; não usar o diretório `.next` como artefato estático de GitHub Pages.
